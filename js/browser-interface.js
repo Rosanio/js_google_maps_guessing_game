@@ -7,7 +7,7 @@
 // 7. maybe add guess and new round click handlers to their own folders
 // 8. instead of usng set timeout, wrap all code in a promise
 // 9. wrap everything inside main set interval loop in its own function, if that's not too clunky
-
+// 10. if possible, hide api key
 
 
 var initialize = require("./../js/map.js").initialize;
