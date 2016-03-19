@@ -275,9 +275,6 @@ $(function() {
 
     createCircle(map, centerLatitude, centerLongitude);
   });
-
-
-  // CLICK FUNCTIONS FOR SHOWING LABELS
   
   $('#waterLabels').click(function() {
     var zoom = map.getZoom();
