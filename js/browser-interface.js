@@ -7,14 +7,13 @@
 // 7. maybe add guess and new round click handlers to their own folders
 // 8. instead of usng set timeout, wrap all code in a promise
 // 9. wrap everything inside main set interval loop in its own function, if that's not too clunky
-
+// 10. if possible, hide api key
 
 var initialize = require("./../js/map.js").initialize;
 var apiKey = require("./../.env").apiKey;
 var calculateDistance = require("./../js/calculate-distance.js").calculateDistance;
 var createCircle = require('./../js/create-circle.js').createCircle;
 var limitZoom = require('./../js/limit-zoom.js').limitZoom;
-var trackZoom = require('./../js/track-zoom.js').trackZoom;
 
 var cityArray = [
   {
@@ -216,9 +215,6 @@ $(function() {
     // LIMIT ZOOM
     limitZoom(map, minZoomLevel);
 
-    // TRACK ZOOM TO DECRIMENT POINTS
-    trackZoom(map, maxZoom, points);
-
     // CREATE CIRCLE FOR DANGER ZONE
     createCircle(map, centerLatitude, centerLongitude);
 
@@ -272,7 +268,6 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initialize(localStyleArray, currentLatitude, currentLongitude, zoom));
     map = initialize(localStyleArray, currentLatitude, currentLongitude, zoom);
     limitZoom(map, minZoomLevel);
-
     createCircle(map, centerLatitude, centerLongitude);
   });
 
@@ -289,7 +284,6 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initialize(localStyleArray, currentLatitude, currentLongitude, zoom));
     map = initialize(localStyleArray, currentLatitude, currentLongitude, zoom);
     limitZoom(map, minZoomLevel);
-    trackZoom(map, maxZoom, points);
     createCircle(map, centerLatitude, centerLongitude);
   });
   $('#attractionLabels').click(function() {
@@ -305,7 +299,6 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initialize(localStyleArray, currentLatitude, currentLongitude, zoom));
     map = initialize(localStyleArray, currentLatitude, currentLongitude, zoom);
     limitZoom(map, minZoomLevel);
-    trackZoom(map, maxZoom, points);
     createCircle(map, centerLatitude, centerLongitude);
   });
   $('#roadLabels').click(function() {
@@ -321,7 +314,6 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initialize(localStyleArray, currentLatitude, currentLongitude, zoom));
     map = initialize(localStyleArray, currentLatitude, currentLongitude, zoom);
     limitZoom(map, minZoomLevel);
-    trackZoom(map, maxZoom, points);
     createCircle(map, centerLatitude, centerLongitude);
   });
 
@@ -382,7 +374,6 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initialize(localStyleArray, centerLatitude, centerLongitude, zoom));
     map = initialize(localStyleArray, centerLatitude, centerLongitude, zoom);
     limitZoom(map, minZoomLevel);
-    trackZoom(map, maxZoom, points);
     createCircle(map, centerLatitude, centerLongitude);
     $('#newRound').hide();
   });
