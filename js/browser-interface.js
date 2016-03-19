@@ -1,4 +1,13 @@
-// 2. glyphicon still not working without seperate bootstrap.css file / do this later
+// 1. glyphicon still not working without seperate bootstrap.css file / do this later
+// 2. move arrays and functions to seperate folder
+// 3. remove local style array (maybe)
+// 4. remove track zoom function if not being used
+// 5. go through global variables and remove any that aren't being used
+// 6. refactor click handlers somehow, maybe create seperate interface functions or possibly write a function to run in each click event handler and write them in a for loop
+// 7. maybe add guess and new round click handlers to their own folders
+// 8. instead of usng set timeout, wrap all code in a promise
+// 9. wrap everything inside main set interval loop in its own function, if that's not too clunky
+
 
 
 var initialize = require("./../js/map.js").initialize;
