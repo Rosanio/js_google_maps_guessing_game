@@ -8,6 +8,7 @@
 // 8. instead of usng set timeout, wrap all code in a promise
 // 9. wrap everything inside main set interval loop in its own function, if that's not too clunky
 // 10. if possible, hide api key
+// 11. segregate info into objects being returned by seperate function files
 
 var initialize = require("./../js/map.js").initialize;
 var apiKey = require("./../.env").apiKey;
@@ -275,7 +276,7 @@ $(function() {
 
     createCircle(map, centerLatitude, centerLongitude);
   });
-  
+
   $('#waterLabels').click(function() {
     var zoom = map.getZoom();
     var id = localStyleArray.findIndex(findWater);
