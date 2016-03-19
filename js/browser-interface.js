@@ -9,7 +9,6 @@
 // 9. wrap everything inside main set interval loop in its own function, if that's not too clunky
 // 10. if possible, hide api key
 
-
 var initialize = require("./../js/map.js").initialize;
 var apiKey = require("./../.env").apiKey;
 var calculateDistance = require("./../js/calculate-distance.js").calculateDistance;
@@ -276,6 +275,10 @@ $(function() {
 
     createCircle(map, centerLatitude, centerLongitude);
   });
+
+
+  // CLICK FUNCTIONS FOR SHOWING LABELS
+  
   $('#waterLabels').click(function() {
     var zoom = map.getZoom();
     var id = localStyleArray.findIndex(findWater);
