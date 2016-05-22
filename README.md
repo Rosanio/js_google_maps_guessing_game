@@ -3,7 +3,7 @@
 ##### Epicodus two day project 3/16/16-3/17/16
 
 ##### Author Name
-Matt Rosanio
+Matt Rosanio & Tyler Suderman
 
 ## Description
 This website will load a google map centered in a random city (picked from a predetermined list). The objective is for users to guess what city they are in. Labels are disabled, zoom is limited, and the further away from the center you scroll, the more points you lose. Users can buy labels at the expense of points to make it easier to guess where they are.
@@ -40,7 +40,7 @@ $ gulp build
 
 ## Legal
 
-Copyright (c) 2016 Matt Rosanio
+Copyright (c) 2016 Matt Rosanio & Tyler Suderman
 
 This software is licensed under the MIT license.
 
